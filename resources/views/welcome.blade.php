@@ -16,10 +16,7 @@
 
     <div id="app"></div>
 
-    {{-- <script src="{{ asset('assets/js/charts-lines.js') }}" defer></script>
-    <script src="{{ asset('assets/js/charts-pie.js') }}" defer></script>
-    <script src="{{ asset('assets/js/charts-bars.js') }}" defer></script> --}}
-    {{-- <script src="{{ asset('assets/js/focus-trap.js') }}" defer></script> --}}
+
 
     @vite('resources/js/app.js')
   </body>
