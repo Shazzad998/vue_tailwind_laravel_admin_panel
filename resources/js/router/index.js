@@ -7,7 +7,12 @@ import Buttons from "../pages/Buttons.vue";
 import Charts from "../pages/Charts.vue";
 import Modals from "../pages/Modals.vue";
 
+import Login from "../pages/auth/Login.vue";
+import Register from "../pages/auth/Register.vue";
+import ForgotPassword from "../pages/auth/ForgotPassword.vue";
+
 import DefaultLayout from "../layouts/DefaultLayout.vue";
+import AuthLayout from "../layouts/AuthLayout.vue";
 
 const routes = [
     {
@@ -50,6 +55,31 @@ const routes = [
                 path: "/modals",
                 component: Modals,
                 name: "modals",
+            },
+        ],
+    },
+
+    {
+        path: "/auth",
+        redirect: "/auth/login",
+        component: AuthLayout,
+        children: [
+            {
+                path: "/auth/login",
+                name: "login",
+                component: Login,
+            },
+
+            {
+                path: "/auth/register",
+                name: "register",
+                component: Register,
+            },
+
+            {
+                path: "/auth/forgot-password",
+                name: "forgot-password",
+                component: ForgotPassword,
             },
         ],
     },
